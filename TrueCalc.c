@@ -41,6 +41,11 @@ float Division(float num)
     float numForDivision;
    printf("Input number to divide by: ");
    scanf("%f",&numForDivision);
+   if(numForDivision == 0)
+   {
+       printf("Syntax Error(Can't divide by 0 silly)\n");   //Checks in case of division by 0
+       return Division(num);
+   }
    num = num / numForDivision;
    printf("\n%.2f\n\n", num);
     return num;
